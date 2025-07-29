@@ -42,7 +42,7 @@ const ProductDetail: React.FC = () => {
 
   const addToCart = async () => {
     if (!user) {
-      alert('Please login to add items to cart')
+      alert('Please login to add items to your cart')
       navigate('/auth')
       return
     }
@@ -62,20 +62,21 @@ const ProductDetail: React.FC = () => {
           // Item already in cart, update quantity
           const { error: updateError } = await supabase
             .from('cart_items')
-            .update({ quantity: supabase.sql`quantity + 1` })
+            .update({ quantity: 1 })
             .eq('user_id', user.id)
             .eq('product_id', product.id)
 
           if (updateError) throw updateError
+          alert('Item quantity updated in cart!')
         } else {
           throw error
         }
+      } else {
+        alert('Added to cart!')
       }
-      
-      alert('Added to cart!')
     } catch (error) {
       console.error('Error adding to cart:', error)
-      alert('Error adding to cart')
+      alert('Unable to add item to cart. Please try again.')
     } finally {
       setAddingToCart(false)
     }
@@ -83,7 +84,7 @@ const ProductDetail: React.FC = () => {
 
   const addToWishlist = async () => {
     if (!user) {
-      alert('Please login to add items to wishlist')
+      alert('Please login to add items to your wishlist')
       navigate('/auth')
       return
     }
@@ -100,7 +101,7 @@ const ProductDetail: React.FC = () => {
 
       if (error) {
         if (error.code === '23505') {
-          alert('Item already in wishlist!')
+          alert('This item is already in your wishlist!')
         } else {
           throw error
         }
@@ -109,7 +110,7 @@ const ProductDetail: React.FC = () => {
       }
     } catch (error) {
       console.error('Error adding to wishlist:', error)
-      alert('Error adding to wishlist')
+      alert('Unable to add item to wishlist. Please try again.')
     } finally {
       setAddingToWishlist(false)
     }

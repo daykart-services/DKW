@@ -10,6 +10,7 @@ import Dashboard from './pages/Dashboard'
 import AdminDashboard from './pages/AdminDashboard'
 import CategoryPage from './pages/CategoryPage'
 import ProductDetail from './pages/ProductDetail'
+import ProductsPage from './pages/ProductsPage'
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/admin-login" element={<AdminLogin />} />
+              
+              {/* Products Routes */}
+              <Route path="/products" element={<ProductsPage />} />
+              <Route path="/products/:category" element={<ProductsPage />} />
               
               {/* Category Routes */}
               <Route path="/beds" element={<CategoryPage />} />

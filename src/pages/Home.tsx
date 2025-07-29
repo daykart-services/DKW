@@ -20,7 +20,7 @@ const Home: React.FC = () => {
     Explore our new collection and make yourself feel at home.
   </p>
   <Link
-    to="/new-collections"
+    to="/products/new-collections"
     className="inline-block px-8 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-800 transition-colors"
   >
     Explore Now

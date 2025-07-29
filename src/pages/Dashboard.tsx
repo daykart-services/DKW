@@ -59,30 +59,44 @@ const Dashboard: React.FC = () => {
   }
 
   const removeFromCart = async (itemId: string) => {
+    if (!user) {
+      alert('Please login to manage your cart')
+      return
+    }
+
     try {
       const { error } = await supabase
         .from('cart_items')
         .delete()
         .eq('id', itemId)
+        .eq('user_id', user.id) // Additional security check
 
       if (error) throw error
       fetchUserData()
     } catch (error) {
       console.error('Error removing from cart:', error)
+      alert('Unable to remove item from cart. Please try again.')
     }
   }
 
   const removeFromWishlist = async (itemId: string) => {
+    if (!user) {
+      alert('Please login to manage your wishlist')
+      return
+    }
+
     try {
       const { error } = await supabase
         .from('wishlist_items')
         .delete()
         .eq('id', itemId)
+        .eq('user_id', user.id) // Additional security check
 
       if (error) throw error
       fetchUserData()
     } catch (error) {
       console.error('Error removing from wishlist:', error)
+      alert('Unable to remove item from wishlist. Please try again.')
     }
   }
 

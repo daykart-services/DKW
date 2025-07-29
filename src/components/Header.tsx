@@ -10,11 +10,12 @@ const Header: React.FC = () => {
   const navigate = useNavigate()
 
   const categories = [
-    { name: 'BEDS', path: '/beds' },
-    { name: 'STATIONARY', path: '/stationary' },
-    { name: 'BATHWARE', path: '/bathware' },
-    { name: 'DORM', path: '/dorm' },
-    { name: 'NEW COLLECTIONS', path: '/new-collections' }
+    { name: 'ALL PRODUCTS', path: '/products' },
+    { name: 'BEDS', path: '/products/beds' },
+    { name: 'STATIONARY', path: '/products/stationary' },
+    { name: 'BATHWARE', path: '/products/bathware' },
+    { name: 'DORM', path: '/products/dorm' },
+    { name: 'NEW COLLECTIONS', path: '/products/new-collections' }
   ]
 
   const handleLogout = async () => {
