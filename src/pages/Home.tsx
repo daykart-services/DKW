@@ -29,6 +29,7 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             </div>
+            </div>
             
             <div className="relative">
               <div className="w-80 h-80 bg-black full mx-auto relative overflow-hidden">
@@ -51,7 +52,6 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-        </div>
       </section>
 
       <FeaturedProducts />
@@ -61,5 +61,3 @@ const Home: React.FC = () => {
 }
 
 export default Home
-  )
-}
