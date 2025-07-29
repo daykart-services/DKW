@@ -267,10 +267,10 @@ const AdminDashboard: React.FC = () => {
                           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                         >
                           <option value="beds">Beds</option>
-                          <option value="stationary">Stationary</option>
+                          <option value="stationery">Stationery</option>
+                          <option value="books">Books</option>
                           <option value="bathware">Bathware</option>
                           <option value="dorm">Dorm</option>
-                          <option value="new-collections">New Collections</option>
                         </select>
                       </div>
                       <div>

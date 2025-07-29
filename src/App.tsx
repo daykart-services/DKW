@@ -11,6 +11,7 @@ import AdminDashboard from './pages/AdminDashboard'
 import CategoryPage from './pages/CategoryPage'
 import ProductDetail from './pages/ProductDetail'
 import ProductsPage from './pages/ProductsPage'
+import PaymentPage from './pages/PaymentPage'
 
 function App() {
   return (
@@ -30,13 +31,16 @@ function App() {
               
               {/* Category Routes */}
               <Route path="/beds" element={<CategoryPage />} />
-              <Route path="/stationary" element={<CategoryPage />} />
+              <Route path="/stationery" element={<CategoryPage />} />
+              <Route path="/books" element={<CategoryPage />} />
               <Route path="/bathware" element={<CategoryPage />} />
               <Route path="/dorm" element={<CategoryPage />} />
-              <Route path="/new-collections" element={<CategoryPage />} />
               
               {/* Product Detail Route */}
               <Route path="/product/:id" element={<ProductDetail />} />
+              
+              {/* Payment Route */}
+              <Route path="/payment" element={<PaymentPage />} />
               
               {/* Protected Routes */}
               <Route 

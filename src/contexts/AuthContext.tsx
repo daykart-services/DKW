@@ -56,16 +56,27 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       password,
       options: {
         emailRedirectTo: undefined,
-        data: {
-          email_confirm: false,
-          email_confirmation_sent: false
-        }
       }
     })
     
-    // With email confirmation disabled, user should be immediately available
+    // Create profile after successful signup
     if (data.user && !error) {
       setUser(data.user)
+      
+      // Create user profile
+      try {
+        await supabase
+          .from('profiles')
+          .insert([
+            { 
+              id: data.user.id, 
+              email: data.user.email || email,
+              is_admin: false 
+            }
+          ])
+      } catch (profileError) {
+        console.error('Error creating profile:', profileError)
+      }
     }
     
     return { data, error }

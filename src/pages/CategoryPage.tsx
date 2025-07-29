@@ -56,10 +56,10 @@ const CategoryPage: React.FC = () => {
   const getCategoryDescription = () => {
     const descriptions: Record<string, string> = {
       'beds': 'Comfortable beds and mattresses designed for hostel rooms and student accommodation.',
-      'stationary': 'Essential stationery items and study accessories for students and professionals.',
+      'stationery': 'Essential stationery items and study accessories for students and professionals.',
+      'books': 'Academic books, novels, and reference materials for students and book lovers.',
       'bathware': 'Bathroom essentials and accessories for modern hostel and dorm facilities.',
       'dorm': 'Complete dorm room essentials and furniture for comfortable student living.',
-      'new-collections': 'Latest arrivals and trending products from our newest collections.'
     }
     return descriptions[category] || `Discover our curated collection of ${getCategoryTitle().toLowerCase()} products.`
   }

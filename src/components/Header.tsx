@@ -11,11 +11,11 @@ const Header: React.FC = () => {
 
   const categories = [
     { name: 'ALL PRODUCTS', path: '/products' },
-    { name: 'BEDS', path: '/products/beds' },
-    { name: 'STATIONARY', path: '/products/stationary' },
-    { name: 'BATHWARE', path: '/products/bathware' },
-    { name: 'DORM', path: '/products/dorm' },
-    { name: 'NEW COLLECTIONS', path: '/products/new-collections' }
+    { name: 'BEDS', path: '/beds' },
+    { name: 'STATIONERY', path: '/stationery' },
+    { name: 'BOOKS', path: '/books' },
+    { name: 'BATHWARE', path: '/bathware' },
+    { name: 'DORM', path: '/dorm' }
   ]
 
   const handleLogout = async () => {

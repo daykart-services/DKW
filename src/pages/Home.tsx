@@ -11,21 +11,24 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
            <div className="ml-28">
-  <p className="text-sm text-gray-600 mb-4">New in</p>
-  <h1 className="text-5xl font-bold text-gray-900 mb-4">
-    PREMIUM<br />
-    COLLECTION
-  </h1>
-  <p className="text-gray-700 text-lg mb-8">
-    Explore our new collection and make yourself feel at home.
-  </p>
-  <Link
-    to="/products/new-collections"
-    className="inline-block px-8 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-800 transition-colors"
-  >
-    Explore Now
-  </Link>
-</div>
+            <div className="flex justify-end">
+              <div className="ml-20">
+                <p className="text-sm text-gray-600 mb-4">New in</p>
+                <h1 className="text-5xl font-bold text-gray-900 mb-4">
+                  PREMIUM<br />
+                  COLLECTION
+                </h1>
+                <p className="text-gray-700 text-lg mb-8">
+                  Explore our new collection and make yourself feel at home.
+                </p>
+                <Link
+                  to="/products"
+                  className="inline-block px-8 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-800 transition-colors"
+                >
+                  Explore Now
+                </Link>
+              </div>
+            </div>
             
             <div className="relative">
               <div className="w-80 h-80 bg-black full mx-auto relative overflow-hidden">
