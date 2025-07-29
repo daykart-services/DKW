@@ -51,6 +51,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       <FeaturedProducts />
